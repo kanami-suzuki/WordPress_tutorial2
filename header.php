@@ -22,7 +22,7 @@
 
 <header>
 <div class="inner">
-<h1 id="logo"><a href="<?php echo esc_url( home_url('/') ); ?>"><img src="images/logo.png" alt="SAMPLE COMPANY"></a></h1>
+<h1 id="logo"><a href="<?php echo esc_url( home_url('/') ); ?>"><img src="<?php echo get_theme_file_uri('images/logo.png') ?>" alt="SAMPLE COMPANY"></a></h1>
 <div id="contact">
 <p class="tel">TEL:00-0000-0000<span>受付：00:00〜00:00　定休日：水曜日</span></p>
 </div>

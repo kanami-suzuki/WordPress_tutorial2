@@ -2,10 +2,10 @@
 
 <!--スライドショー-->
 <aside id="mainimg">
-<img src="images/1.jpg" alt="" class="slide0">
-<img src="images/1.jpg" alt="" class="slide1">
-<img src="images/2.jpg" alt="" class="slide2">
-<img src="images/3.jpg" alt="" class="slide3">
+<img src="<?php echo get_theme_file_uri('images/1.jpg') ?>" alt="" class="slide0">
+<img src="<?php echo get_theme_file_uri('images/1.jpg') ?>" alt="" class="slide1">
+<img src="<?php echo get_theme_file_uri('images/2.jpg') ?>" alt="" class="slide2">
+<img src="<?php echo get_theme_file_uri('images/3.jpg') ?>" alt="" class="slide3">
 </aside>
 
 <div id="contents" class="inner">
@@ -19,7 +19,7 @@
 
 <div class="list">
 <a href="staff.html">
-<figure><img src="images/photo1.png" alt="sample name"></figure>
+<figure><img src="<?php echo get_theme_file_uri('images/photo1.png') ?>" alt="sample name"></figure>
 <h4>sample name</h4>
 <p>簡単な説明を入れます。</p>
 <span class="mark1">人気</span>
@@ -28,7 +28,7 @@
 
 <div class="list">
 <a href="staff.html">
-<figure><img src="images/photo1.png" alt="sample name"></figure>
+<figure><img src="<?php echo get_theme_file_uri('images/photo1.png') ?>" alt="sample name"></figure>
 <h4>sample name</h4>
 <p>簡単な説明を入れます。</p>
 <span class="mark2">NEW</span>
@@ -37,7 +37,7 @@
 
 <div class="list">
 <a href="staff.html">
-<figure><img src="images/photo1.png" alt="sample name"></figure>
+<figure><img src="<?php echo get_theme_file_uri('images/photo1.png') ?>" alt="sample name"></figure>
 <h4>sample name</h4>
 <p>簡単な説明を入れます。</p>
 </a>
@@ -45,7 +45,7 @@
 
 <div class="list">
 <a href="staff.html">
-<figure><img src="images/photo1.png" alt="sample name"></figure>
+<figure><img src="<?php echo get_theme_file_uri('images/photo1.png') ?>" alt="sample name"></figure>
 <h4>sample name</h4>
 <p>文字をつめこみすぎるとボックスから飛び出た部分が非表示になります(※小さな端末の環境で)。余裕をもって入力して下さい。</p>
 </a>
@@ -53,7 +53,7 @@
 
 <div class="list">
 <a href="staff.html">
-<figure><img src="images/photo1.png" alt="sample name"></figure>
+<figure><img src="<?php echo get_theme_file_uri('images/photo1.png') ?>" alt="sample name"></figure>
 <h4>sample name</h4>
 <p>簡単な説明を入れます。</p>
 <span class="mark1">人気</span>
@@ -62,7 +62,7 @@
 
 <div class="list">
 <a href="staff.html">
-<figure><img src="images/photo1.png" alt="sample name"></figure>
+<figure><img src="<?php echo get_theme_file_uri('images/photo1.png') ?>" alt="sample name"></figure>
 <h4>sample name</h4>
 <p>簡単な説明を入れます。</p>
 <span class="mark2">NEW</span>
@@ -71,7 +71,7 @@
 
 <div class="list">
 <a href="staff.html">
-<figure><img src="images/photo1.png" alt="sample name"></figure>
+<figure><img src="<?php echo get_theme_file_uri('images/photo1.png') ?>" alt="sample name"></figure>
 <h4>sample name</h4>
 <p>簡単な説明を入れます。</p>
 </a>
@@ -79,7 +79,7 @@
 
 <div class="list">
 <a href="staff.html">
-<figure><img src="images/photo1.png" alt="sample name"></figure>
+<figure><img src="<?php echo get_theme_file_uri('images/photo1.png') ?>" alt="sample name"></figure>
 <h4>sample name</h4>
 <p>文字をつめこみすぎるとボックスから飛び出た部分が非表示になります(※小さな端末の環境で)。余裕をもって入力して下さい。</p>
 </a>
@@ -199,7 +199,7 @@ TEL：03-0000-0000<br>
 
 <div class="list-sub">
 <a href="staff.html">
-<figure><img src="images/photo1.png" alt=""></figure>
+<figure><img src="<?php echo get_theme_file_uri('images/photo1.png') ?>" alt=""></figure>
 <h4>sample name</h4>
 <p>簡単な説明を入れます。</p>
 </a>
@@ -207,7 +207,7 @@ TEL：03-0000-0000<br>
 
 <div class="list-sub">
 <a href="staff.html">
-<figure><img src="images/photo1.png" alt=""></figure>
+<figure><img src="<?php echo get_theme_file_uri('images/photo1.png') ?>" alt=""></figure>
 <h4>sample name</h4>
 <p>簡単な説明を入れます。</p>
 </a>
@@ -215,7 +215,7 @@ TEL：03-0000-0000<br>
 
 <div class="list-sub">
 <a href="staff.html">
-<figure><img src="images/photo1.png" alt=""></figure>
+<figure><img src="<?php echo get_theme_file_uri('images/photo1.png') ?>" alt=""></figure>
 <h4>sample name</h4>
 <p>簡単な説明を入れます。</p>
 </a>
@@ -223,7 +223,7 @@ TEL：03-0000-0000<br>
 
 <div class="list-sub">
 <a href="staff.html">
-<figure><img src="images/photo1.png" alt=""></figure>
+<figure><img src="<?php echo get_theme_file_uri('images/photo1.png') ?>" alt=""></figure>
 <h4>sample name</h4>
 <p>簡単な説明を入れます。</p>
 </a>
@@ -232,8 +232,8 @@ TEL：03-0000-0000<br>
 </section>
 
 <p>
-<a href="recruit.html"><img src="images/banner1.jpg" alt="採用情報" class="pc border1"></a>
-<a href="recruit.html"><img src="images/banner1_sh.jpg" alt="採用情報" class="sh border1"></a>
+<a href="recruit.html"><img src="<?php echo get_theme_file_uri('images/banner1.jpg') ?>" alt="採用情報" class="pc border1"></a>
+<a href="recruit.html"><img src="<?php echo get_theme_file_uri('images/banner1_sh.jpg') ?>" alt="採用情報" class="sh border1"></a>
 </p>
 <p>上のバナー画像は、801px以上の端末と800px以下とで画像２種類が切り替わります。<br>
 <a href="company.html#banner">詳しい説明はこちら。</a></p>
