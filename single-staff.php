@@ -7,14 +7,21 @@
 
 				<article>
 
-					<h2>sample name</h2>
+				<?php 
+					if (have_posts()) : //if記事があったら下のwhileに進む
+						while (have_posts()) : //記事がある間the_post()を繰り返す
+							the_post() ; //記事の情報を取得
+				?>
+
+					<h2><?php the_title(); ?></h2>
 
 					<div class="staff">
 
 						<div class="left">
 
-							<figure><img src="<?php echo get_theme_file_uri('images/photo1.png') ?>"
-									alt="sample name"></figure>
+							<figure>
+								<?php the_post_thumbnail('medium'); ?>
+							</figure>
 
 						</div>
 						<!--/left-->
@@ -24,43 +31,23 @@
 							<table class="ta1">
 								<tr>
 									<th>名前</th>
-									<td>Sample</td>
+									<td><?php the_title(); ?></td>
 								</tr>
 								<tr>
 									<th>年齢</th>
-									<td>20</td>
+									<td><?php the_field('age'); ?></td>
 								</tr>
 								<tr>
 									<th>スリーサイズ</th>
-									<td>？？？</td>
+									<td><?php the_field('size'); ?></td>
 								</tr>
 								<tr>
 									<th>趣味</th>
-									<td>映画鑑賞</td>
+									<td><?php the_field('hobby'); ?></td>
 								</tr>
 								<tr>
 									<th>タバコ</th>
-									<td>すいません</td>
-								</tr>
-								<tr>
-									<th>見出し</th>
-									<td>サンプルテキスト</td>
-								</tr>
-								<tr>
-									<th>見出し</th>
-									<td>サンプルテキスト</td>
-								</tr>
-								<tr>
-									<th>見出し</th>
-									<td>サンプルテキスト</td>
-								</tr>
-								<tr>
-									<th>見出し</th>
-									<td>サンプルテキスト</td>
-								</tr>
-								<tr>
-									<th>見出し</th>
-									<td>サンプルテキスト</td>
+									<td><?php the_field('tobacco'); ?></td>
 								</tr>
 							</table>
 
@@ -71,6 +58,10 @@
 
 					</div>
 					<!--/staff-->
+				<?php
+						endwhile;
+					endif;
+				?>
 
 				</article>
 
