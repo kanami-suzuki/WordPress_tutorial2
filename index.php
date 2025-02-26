@@ -15,75 +15,37 @@
 
 <section>
 
-<h2>本日出勤のキャスト</h2>
 
-<div class="list">
-<a href="staff.html">
-<figure><img src="<?php echo get_theme_file_uri('images/photo1.png') ?>" alt="sample name"></figure>
-<h4>sample name</h4>
-<p>簡単な説明を入れます。</p>
-<span class="mark1">人気</span>
-</a>
-</div>
 
-<div class="list">
-<a href="staff.html">
-<figure><img src="<?php echo get_theme_file_uri('images/photo1.png') ?>" alt="sample name"></figure>
-<h4>sample name</h4>
-<p>簡単な説明を入れます。</p>
-<span class="mark2">NEW</span>
-</a>
-</div>
+  <h2>本日出勤のキャスト</h2>
 
-<div class="list">
-<a href="staff.html">
-<figure><img src="<?php echo get_theme_file_uri('images/photo1.png') ?>" alt="sample name"></figure>
-<h4>sample name</h4>
-<p>簡単な説明を入れます。</p>
-</a>
-</div>
+  <!-- サブクエリ -->
+  <?php
+  // 取得する投稿の条件を指定する
+  $argc = array( //変数 = 配列
+    'post_type' => 'staff', //投稿タイプはスタッフであると指定している
+  );
 
-<div class="list">
-<a href="staff.html">
-<figure><img src="<?php echo get_theme_file_uri('images/photo1.png') ?>" alt="sample name"></figure>
-<h4>sample name</h4>
-<p>文字をつめこみすぎるとボックスから飛び出た部分が非表示になります(※小さな端末の環境で)。余裕をもって入力して下さい。</p>
-</a>
-</div>
+  //上記の条件に基づいて投稿情報を取得する
+  $query = new WP_Query($argc); //new WQ_Query()はクラス。クラスを定義することによって投稿を取得することになる。()の中に条件を入れる。今回は$argcの中にstaff投稿の中身が入っている
 
-<div class="list">
-<a href="staff.html">
-<figure><img src="<?php echo get_theme_file_uri('images/photo1.png') ?>" alt="sample name"></figure>
-<h4>sample name</h4>
-<p>簡単な説明を入れます。</p>
-<span class="mark1">人気</span>
-</a>
-</div>
+  //ループ処理を行う(カスタム投稿：スタッフ)
+  if($query->have_posts()) : while($query->have_posts()) : $query->the_post();
+  ?>
 
-<div class="list">
-<a href="staff.html">
-<figure><img src="<?php echo get_theme_file_uri('images/photo1.png') ?>" alt="sample name"></figure>
-<h4>sample name</h4>
-<p>簡単な説明を入れます。</p>
-<span class="mark2">NEW</span>
-</a>
-</div>
+    <div class="list">
+      <a href="<?php the_permalink(); ?>">
+        <figure>
+          <?php the_post_thumbnail('medium'); ?>
+        </figure>
+        <h4><?php the_title(); ?></h4>
+        <?php the_content(); ?>
+        <span class="mark1">人気</span>
+      </a>
+    </div>
 
-<div class="list">
-<a href="staff.html">
-<figure><img src="<?php echo get_theme_file_uri('images/photo1.png') ?>" alt="sample name"></figure>
-<h4>sample name</h4>
-<p>簡単な説明を入れます。</p>
-</a>
-</div>
+  <?php endwhile; endif; wp_reset_postdata(); ?>
 
-<div class="list">
-<a href="staff.html">
-<figure><img src="<?php echo get_theme_file_uri('images/photo1.png') ?>" alt="sample name"></figure>
-<h4>sample name</h4>
-<p>文字をつめこみすぎるとボックスから飛び出た部分が非表示になります(※小さな端末の環境で)。余裕をもって入力して下さい。</p>
-</a>
-</div>
 
 </section>
 

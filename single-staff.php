@@ -7,6 +7,7 @@
 
 				<article>
 
+				<!-- メインクエリ -->
 				<?php 
 					if (have_posts()) : //if記事があったら下のwhileに進む
 						while (have_posts()) : //記事がある間the_post()を繰り返す
