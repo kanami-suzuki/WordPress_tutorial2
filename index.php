@@ -51,29 +51,20 @@
 
 <section id="new">
 <h2>更新情報・お知らせ</h2>
+
 <dl>
-<dt>2021/12/14</dt>
-<dd>tableを小さな端末で見た場合に、切れて見える場合がありました。既にご利用中のお客様で対応したい場合、style.cssの<br>
-.ta1 {overflow-x: auto;min-width: 800px;}<br>
-を、以下にして下さい。<br>
-.ta-box .ta1 {overflow-x: auto;min-width: 800px;}</dd>
-<dt>2019/02/21</dt>
-<dd>全面リニューアル。</dd>
-<dt>2014/09/12</dt>
-<dd>tp_108配布開始。</dd>
-<dt>20XX/00/00</dt>
-<dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
-<dt>20XX/00/00</dt>
-<dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
-<dt>20XX/00/00</dt>
-<dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
-<dt>20XX/00/00</dt>
-<dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
-<dt>20XX/00/00</dt>
-<dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
-<dt>20XX/00/00</dt>
-<dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
+  <?php
+    if (have_posts()) : while (have_posts()) : the_post();
+  ?>
+
+    <dt><?php the_time('Y/m/d'); ?></dt>
+    <dd><?php the_excerpt(); ?></dd>
+
+  <?php
+    endwhile; endif;
+  ?>
 </dl>
+
 <p class="r">&raquo;&nbsp;<a href="#">過去ログ</a></p>
 </section>
 
