@@ -23,4 +23,13 @@
   }
   add_filter('excerpt_more', 'custom_excerpt_more');
 
+  //ウィジェットの設定
+  function my_widget_init() {
+    register_sidebar( array(
+      'name' => 'サイドバーの設定',
+      'id'   => 'sidebar',
+    ));
+  }
+  add_action('widgets_init', 'my_widget_init');
+
 ?>
