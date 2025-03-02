@@ -99,7 +99,10 @@
 
 <div id="sub">
 
-<nav class="box1">
+<!-- 竿dpばーの表示(sidebar.phpを呼び出す) -->
+<?php get_sidebar(); ?>
+
+<!-- <nav class="box1">
 <h2>Contents</h2>
 <ul class="submenu">
 <li><a href="company.html">会社概要</a></li>
@@ -108,7 +111,7 @@
 <li><a href="#">メニューサンプル</a></li>
 <li><a href="#">メニューサンプル</a></li>
 </ul>
-</nav>
+</nav> -->
 
 <nav class="box1">
 <ul class="submenu">
