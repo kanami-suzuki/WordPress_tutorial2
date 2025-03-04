@@ -28,7 +28,8 @@
     register_sidebar( array(
       'name' => 'サイドバーの設定',
       'id'   => 'sidebar',
-      'before_widget'  => '<nav c;ass="box1">','</nav>'
+      'before_widget'  => '<nav class="box1">', //ウィジェットの前に表示する要素
+      'after_widget'   => '</nav>', //ウィジェットの後に表示する要素
     ));
   }
   add_action('widgets_init', 'my_widget_init');
