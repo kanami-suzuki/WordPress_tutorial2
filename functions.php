@@ -34,4 +34,13 @@
   }
   add_action('widgets_init', 'my_widget_init');
 
+  //メニューの設定
+  function my_menu_init() {
+    register_nav_menus( array(
+      'global'  =>  'グローバルメニュー',
+
+    ) );
+  }
+  add_action('init', 'my_menu_init');
+
 ?>
