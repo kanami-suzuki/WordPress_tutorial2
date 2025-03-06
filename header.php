@@ -30,7 +30,13 @@
 </header>
 
 <!--PC用（801px以上端末）メニュー-->
-<nav id="menubar" class="nav-fix-pos">
+<?php 
+  wp_nav_menu( array(
+    'theme_location' => 'global',
+  ));
+?>
+
+<!-- <nav id="menubar" class="nav-fix-pos">
 <ul class="inner">
 <li><a href="cast.html">CAST<span>キャスト</span></a></li>
 <li><a href="schedule.html">SCHEDULE<span>スケジュール</span></a></li>
@@ -39,7 +45,7 @@
 <li><a href="recruit.html">RECRUIT<span>キャスト募集</span></a></li>
 <li><a href="contact.html">CONTACT<span>コンタクト</span></a></li>
 </ul>
-</nav>
+</nav> -->
 <!--小さな端末用（800px以下端末）メニュー-->
 <nav id="menubar-s">
 <ul>
